@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.entry1 { animation: appear 250ms; }
+
+.btn_gradient1 {
+    background: linear-gradient(45deg, #e71110, #98141b);
+}
+.btn_hover { transition: transform 250ms ease-out; }
+.btn_hover:hover {
+    transform: scale(1.05);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
