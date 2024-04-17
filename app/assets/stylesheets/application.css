@@ -14,3 +14,30 @@
  *= require_self
  */
 
+.notice, .alert {
+    animation: message 2s;
+    opacity : 0;
+    transform : translateX(-100px);
+}
+
+@keyframes message {
+    0% {
+        opacity : 0;
+        transform : translateX(-100px);
+    }
+
+    15% {
+        opacity : 1;
+        transform : translateX(0px);
+    }
+
+    85% {
+        opacity : 1;
+        transform : translateX(0px);
+    }
+
+    100% {
+        opacity : 0;
+        transform : translateX(-100px);
+    }
+}

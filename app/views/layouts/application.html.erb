@@ -13,8 +13,8 @@
 
   <body>
   <%= render partial: "shared/nav" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <p class="notice text-white fixed m-6 rounded-lg"><%= notice %></p>
+  <p class="alert text-red-600 fixed m-6 rounded-lg"><%= alert %></p>
   <%= yield %>
   </body>
 </html>
