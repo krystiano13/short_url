@@ -7,7 +7,7 @@
   <% if user_signed_in? %>
     <%= link_to "Create URL", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
     <%= link_to "Show URLs", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
-    <%= link_to "Log Out", destroy_user_session_path, class: "link text-white font-medium text-lg p-2 relative" %>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "link text-white font-medium text-lg p-2 relative" %>
   <% else %>
     <%= link_to "Log In", new_user_session_path, class: "link text-white font-medium text-lg p-2 relative" %>
     <%= link_to "Register", new_user_registration_path, class: "link text-white font-medium text-lg p-2 relative" %>
@@ -21,7 +21,7 @@
   <% if user_signed_in? %>
     <%= link_to "Create URL", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
     <%= link_to "Show URLs", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
-    <%= link_to "Log Out", destroy_user_session_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
 <% else %>
     <%= link_to "Log In", new_user_session_path , class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
     <%= link_to "Register", new_user_registration_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
