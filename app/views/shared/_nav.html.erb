@@ -3,14 +3,27 @@
 
 <nav id="nav_menu" class="translate-y-[-100vh] transition-transform bg-purple-custom1 fixed w-full gap-6 p-3 h-auto flex md:hidden flex-col items-center justify-start">
   <%= link_to "Home", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
-  <%= link_to "Create URL", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
-  <%= link_to "Show URLs", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
+
+  <% if user_signed_in? %>
+    <%= link_to "Create URL", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
+    <%= link_to "Show URLs", root_path, class: "link text-white font-medium text-lg p-2 relative" %>
+  <% else %>
+    <%= link_to "Log In", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+    <%= link_to "Register", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+  <% end %>
+
 </nav>
 
 <nav class="w-full flex bg-gray-900 items-center justify-end md:justify-start gap-12 p-5 pl-6 pr-6 md:pl-16 md:pr-16 h-[7vh] lg:h-[7vh] min-h-12">
   <%= link_to "Home", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
-  <%= link_to "Create URL", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
-  <%= link_to "Show URLs", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+
+  <% if user_signed_in? %>
+    <%= link_to "Create URL", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+    <%= link_to "Show URLs", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+  <% else %>
+    <%= link_to "Log In", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+    <%= link_to "Register", root_path, class: "link hidden md:block text-white font-medium text-sm md:text-base relative" %>
+  <% end %>
 
   <div class="z-50 flex rounded-full transition-colors p-1 md:hidden flex-col w-12 h-12 items-center justify-center gap-[7px]" id="hamburger_button">
     <% 3.times do %>
