@@ -1,6 +1,6 @@
 <%= render partial: "shared/nav" %>
 <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
-<main class="w-full h-[93vh] min-h-96 bg-gray-800 flex justify-center items-center">
+<main class="w-full h-[93vh] min-h-96 bg-gray-900 flex justify-center items-center">
   <section class="w-full lg:w-1/2 h-full flex flex-col justify-center gap-8 p-6 pl-12 pr-12 md:pl-16 md:pr-16 entry1">
     <h1 class="w-full text-white font-bold text-7xl">SHORT URL</h1>
     <p class="text-white font-light text-2xl">World's best URL shortener.</p>
@@ -9,6 +9,6 @@
   </section>
 
   <section class="w-1/2 h-full flex flex-col justify-center items-center">
-
+    <%= image_tag "home.png", alt: "Home Image", class: "w-full h-full p-4 object-contain" %>
   </section>
 </main>

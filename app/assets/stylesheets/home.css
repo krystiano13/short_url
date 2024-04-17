@@ -1,7 +1,7 @@
 .entry1 { animation: appear 250ms; }
 
 .btn_gradient1 {
-    background: linear-gradient(45deg, #e71110, #98141b);
+    background: linear-gradient(45deg, #5f10e7, #491498);
 }
 .btn_hover { transition: transform 250ms ease-out; }
 .btn_hover:hover {
