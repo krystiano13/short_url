@@ -1,0 +1,26 @@
+.link {
+    transition: transform 250ms;
+    will-change: tranform;
+}
+
+.link:hover {
+    transform: translateY(-0.25rem);
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+}
+
+.link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 250ms;
+    will-change: tranform;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+}
