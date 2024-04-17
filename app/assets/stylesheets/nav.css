@@ -1,7 +1,3 @@
-.bg-purple-custom1 {
-    background-color: #5F10E7FF;
-}
-
 .link {
     transition: transform 250ms;
     will-change: tranform;

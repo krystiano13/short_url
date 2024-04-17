@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-purple-custom1 {
+    background-color: #5F10E7FF;
+}
+
+.bg-purple-custom2 {
+    background-color: rgba(76, 16, 187, 0.2);
+}
+
+#devise h2 {
+    @apply text-white font-medium text-3xl
+}
+
+#devise a { @apply text-white; }
+
+#devise form {
+    @apply flex flex-col items-center justify-center gap-7;
+    @apply bg-purple-custom2 rounded-xl p-5;
+}
+
+#devise form .field label {
+    @apply text-white;
+}
+
+#devise form .field input {
+    border: none;
+    outline: none;
+    border-bottom: solid 2px #5F10E7FF;;
+    @apply bg-purple-custom2 mt-2 text-white;
+}
+
+#devise form .actions input {
+    background: linear-gradient(45deg, #5f10e7, #491498);
+    @apply text-white cursor-pointer p-2 pl-6 pr-6 rounded-lg;
+}
+
+#user_remember_me { @apply m-0 p-0; }
+#remember label { @apply block ml-2; }
+#remember { @apply flex items-center; }
+#devise form .field #user_remember_me { border: none; }
+
 /*
 
 @layer components {
