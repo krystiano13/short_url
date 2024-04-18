@@ -9,7 +9,7 @@
       <tr class="border-solid border-2 border-white">
         <td class="border-solid border-2 border-white p-2"><%= url.long %></td>
         <td class="border-solid border-2 border-white p-2">
-          <%= link_to url.short, root_path %>
+          <%= link_to url.short, url_show_one_url(url.short) %>
         </td>
         <td class="border-solid border-2 border-white text-center p-2"><%= url.visits %></td>
       </tr>

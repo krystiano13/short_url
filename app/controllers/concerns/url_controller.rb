@@ -9,6 +9,16 @@ class UrlController < ApplicationController
     @urls = Url.where(:user_id => id)
   end
 
+  def show_one
+    url = Url.find_by(short: params[:key])
+
+    if url.present?
+      redirect_to url.long, allow_other_host:true
+      url.update(:visits => url.visits + 1)
+      url.save!
+    end
+  end
+
   def create
     require 'digest'
     @url = Url.new(get_params)
