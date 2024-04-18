@@ -1,0 +1,19 @@
+<main id="devise" class="bg-gray-900 w-full h-[93vh] flex flex-col gap-4 items-center justify-center">
+  <%= form_with model: @url, url: create_url_path do |form|%>
+
+    <% if form.object.errors.any? %>
+      <% form.object.errors.full_messages.each do |error| %>
+        <p class="text-red-600"><%= error %></p>
+      <% end %>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :long, "Your URL" %>
+      <br />
+      <%= form.text_field :long %>
+    </div>
+
+    <%= form.button "Shorten URL" %>
+
+  <% end %>
+</main>

@@ -32,7 +32,8 @@
     @apply bg-purple-custom2 mt-2 text-white;
 }
 
-#devise form .actions input {
+#devise form .actions input,
+#devise form button {
     background: linear-gradient(45deg, #5f10e7, #491498);
     @apply text-white cursor-pointer p-2 pl-6 pr-6 rounded-lg;
 }

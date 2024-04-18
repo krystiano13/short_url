@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root to: "main#index"
+
+  get "url/add", to: "url#new", as: :new_url
+  post "url/add", to: "url#create", as: :create_url
 end
