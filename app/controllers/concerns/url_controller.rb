@@ -21,9 +21,9 @@ class UrlController < ApplicationController
     @url.visits = 0
 
     if @url.save
-      redirect_to root_path
+      redirect_to url_show_all_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
