@@ -4,6 +4,11 @@ class UrlController < ApplicationController
     @url = Url.new
   end
 
+  def show_all
+    id = current_user.id
+    @urls = Url.where(:user_id => id)
+  end
+
   def create
     require 'digest'
     @url = Url.new(get_params)
@@ -22,6 +27,7 @@ class UrlController < ApplicationController
     end
   end
 
+  private
   def get_params
     return params.require(:url).permit(:long)
   end
