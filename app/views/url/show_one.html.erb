@@ -1,1 +1,6 @@
-<%= @url.long %>
+<main class="bg-gray-900 w-full h-[93vh] flex flex-col gap-4 items-center">
+  <h1 class="text-white text-4xl m-6">Redirecting ...</h1>
+  <p class="hidden" id="key"><%= url_count_visits_url(@url.short) %></p>
+  <p class="hidden" id="long_url"><%= @url.long %></p>
+  <script defer src="<%= javascript_path "url/visit_counter" %>"></script>
+</main>
