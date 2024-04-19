@@ -5,4 +5,4 @@ fetch(key_paragraph.innerText, { method: "POST" })
     .then((res) => {
         return res.json()
     })
-    .then(() =>  window.location.href = long_url_paragraph.innerText)
+    .then(() =>  window.location.replace(long_url_paragraph.innerText))

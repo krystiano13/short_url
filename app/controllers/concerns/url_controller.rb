@@ -22,7 +22,7 @@ class UrlController < ApplicationController
       @url.save!
     end
 
-    render :json => {:status => "success"}
+    render :json => {:status => "success"}, status: :ok
   end
   def create
     require 'digest'
